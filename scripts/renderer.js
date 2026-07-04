@@ -17,14 +17,14 @@ class Renderer {
     }
 
     setPixel(x,y){
-        if (x>this.cols) {
+        if (x>=this.cols) {
             x-=this.cols;
         }
         else if (x<0){
             x+=this.cols;
         }
 
-        if (y>this.rows){
+        if (y>=this.rows){
             y-=this.rows;
         }
         else if (y<0){
@@ -56,6 +56,15 @@ class Renderer {
                     this.ctx.fillRect(x,y,this.scale,this.scale)
                 }
         }
+    }
+
+    testRender(){
+this.setPixel(7,14);
+this.setPixel(35,29);
+this.setPixel(4,57);
+this.setPixel(35,83);
+this.setPixel(35,124);
+this.setPixel(35,239);
     }
 }
 
